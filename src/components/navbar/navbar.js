@@ -10,15 +10,13 @@ const links = [
 
 const Navbar = () => (
   <nav>
-    <div>
-        <a href="">
-          <img src={logo} width="50" height="50"  />
-        </a>
-        <h1 className="web-title">Space Travelers' Hub</h1>
-    </div>
-    <ul className="nav-items">
+    <a href={links[0].path} className="nav-title">
+      <img src={logo} width="50" height="50"  />
+      <h1 className="web-title">Space Travelers' Hub</h1>
+    </a>
+    <ul className="nav-list">
       {links.map((link) => (
-        <li key={link.text}>
+        <li className="nav-items" key={link.text}>
           <NavLink to={link.path}>{link.text}</NavLink>
         </li>
       ))}
