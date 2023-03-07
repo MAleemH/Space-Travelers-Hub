@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+.container {
+  margin: 20px 20px;
+}
+
+.table-container {
+  border-collapse: collapse;
+}
+
+th {
+  height: 50px;
+}
+
+table,
+tr,
+td,
+th {
+  border: 2px solid #e8e8e8;
+  padding: 10px 10px;
+}
+
+.join-mission-btn {
+  font-family: 'Merriweather', serif;
+}
