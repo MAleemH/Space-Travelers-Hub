@@ -3,7 +3,7 @@ import Rocket from './rocket.jpg';
 
 const Rockets = () => (
   <div className="rockets-container">
-    <img src={Rocket} className="rocket-image" alt="Rocket-Image" />
+    <img src={Rocket} className="rocket" alt="Rocket-Image" />
     <div className="rocket-data">
       <p className="rocket-title">Falcon 1</p>
       <p className="rocket-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id orci eu ex malesuada tincidunt ac et dolor. Nunc vel dolor porta, semper felis ut, convallis nibh.</p>
