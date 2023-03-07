@@ -11,8 +11,8 @@ const links = [
 const Navbar = () => (
   <nav>
     <a href={links[0].path} className="nav-title">
-      <img src={logo} width="50" height="50"  />
-      <h1 className="web-title">Space Travelers' Hub</h1>
+      <img src={logo} alt="Logo-Img" width="50" height="50" />
+      <h1 className="web-title">Space Travelers&apos; Hub</h1>
     </a>
     <ul className="nav-list">
       {links.map((link) => (
