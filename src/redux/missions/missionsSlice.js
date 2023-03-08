@@ -11,12 +11,12 @@ const initialState = {
 
 export const getMissionsData = createAsyncThunk(
   'missionList/getMissionsData',
-  async (missionLists, thunkAPI) => {
+  async () => {
     try {
-      const response = await axios.get(API_URL, missionLists);
+      const response = await axios.get(API_URL);
       return response.data;
     } catch (e) {
-      return thunkAPI.rejectWithValue({ error: e.message });
+      return e.message;
     }
   },
 );
