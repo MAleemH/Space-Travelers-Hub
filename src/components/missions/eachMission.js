@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const EachMission = ({ mission }) => {
-  const { missionId, missionName, description } = mission;
-
+function EachMission({ missionName, missionId, description }) {
   return (
     <tr>
       <td className="td mission-title">
@@ -22,14 +20,12 @@ const EachMission = ({ mission }) => {
       </td>
     </tr>
   );
-};
+}
 
 EachMission.propTypes = {
-  mission: PropTypes.shape({
-    missionName: PropTypes.string,
-    missionId: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-  }).isRequired,
+  missionName: PropTypes.string.isRequired,
+  missionId: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default EachMission;
