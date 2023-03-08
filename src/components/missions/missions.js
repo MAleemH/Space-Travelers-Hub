@@ -14,16 +14,6 @@ const Missions = () => {
     dispatch(getMissionsData());
   }, [dispatch]);
 
-  const missionsList = missionsInfo.map(
-    ({ mission_id: missionId, mission_name: missionName, description }) => (
-      <EachMission
-        key={missionId}
-        missionName={missionName}
-        description={description}
-      />
-    ),
-  );
-
   return (
     <div className="container">
       <table className="table-container">
@@ -35,7 +25,16 @@ const Missions = () => {
             <th className="th"> </th>
           </tr>
         </thead>
-        <tbody>{missionsList}</tbody>
+        <tbody>
+          {missionsInfo.map((missions) => (
+            <EachMission
+              key={missions.mission_id}
+              missionId={missions.mission_id}
+              missionName={missions.mission_name}
+              description={missions.description}
+            />
+          ))}
+        </tbody>
       </table>
     </div>
   );
