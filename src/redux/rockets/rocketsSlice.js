@@ -25,7 +25,7 @@ const rocketsSlice = createSlice({
   initialState: [],
   extraReducers: (builder) => {
     builder
-    .addCase(fetchRocketsData.fulfilled, (state, action) => action.payload)
+      .addCase(fetchRocketsData.fulfilled, (state, action) => action.payload);
   },
 });
 

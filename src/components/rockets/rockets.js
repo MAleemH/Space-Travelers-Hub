@@ -10,22 +10,22 @@ const Rockets = () => {
 
   useEffect(() => {
     dispatch(fetchRocketsData());
-  }, []);
+  }, [dispatch]);
 
-  return(
+  return (
     <>
-    {rocketsData.map((rocket) => (
-      <div className="rockets-container" key={rocket.id}>
-        <img src={rocket.flickr_images} className="rocket-image" alt={rocket.id} />
-        <div className="rocket-data">
-          <p className="rocket-title">{rocket.rocket_name}</p>
-          <p className="rocket-description">{rocket.description}</p>
-          <button type="button" className="reservation-button">Reserve Rocket</button>
+      {rocketsData.map((rocket) => (
+        <div className="rockets-container" key={rocket.id}>
+          <img src={rocket.flickr_images} className="rocket-image" alt={rocket.id} />
+          <div className="rocket-data">
+            <p className="rocket-title">{rocket.rocket_name}</p>
+            <p className="rocket-description">{rocket.description}</p>
+            <button type="button" className="reservation-button">Reserve Rocket</button>
+          </div>
         </div>
-      </div>
-    ))}
+      ))}
     </>
   );
-}
+};
 
 export default Rockets;
