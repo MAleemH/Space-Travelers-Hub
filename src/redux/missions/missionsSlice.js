@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_URL = 'https://api.spacexdata.com/v3/missions/';
+const API_URL = 'https://api.spacexdata.com/v3/missions';
 const initialState = {
   missionLists: [],
   isLoading: false,
@@ -35,6 +35,11 @@ const missionsSlice = createSlice({
         ...state,
         isLoading: false,
         missionLists: action.payload,
+      }))
+      .addCase(getMissionsData.rejected, (state, action) => ({
+        ...state,
+        isLoading: false,
+        error: action.error,
       }));
   },
 });
