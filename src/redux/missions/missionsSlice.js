@@ -14,7 +14,16 @@ export const getMissionsData = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(API_URL);
-      return response.data;
+      const newData = [];
+      response.data.forEach((list) => {
+        newData.push({
+          missionName: list.mission_name,
+          missionId: list.mission_id,
+          description: list.description,
+          joinedMission: false,
+        });
+      });
+      return newData;
     } catch (e) {
       return e.message;
     }
@@ -24,6 +33,18 @@ export const getMissionsData = createAsyncThunk(
 const missionsSlice = createSlice({
   name: 'mission',
   initialState,
+  reducers: {
+    joinMission: (state, action) => {
+      const newState = state.missionLists.map((mission) => {
+        if (mission.missionId !== action.payload) {
+          return mission;
+        }
+        return { ...mission, joinedMission: !mission.joinedMission };
+      });
+      return { ...state, missionLists: newState };
+    },
+  },
+
   extraReducers(builder) {
     builder
       .addCase(getMissionsData.pending, (state) => ({
@@ -44,4 +65,5 @@ const missionsSlice = createSlice({
   },
 });
 
+export const { joinMission } = missionsSlice.actions;
 export default missionsSlice.reducer;
