@@ -1,6 +1,8 @@
+import MissionProfile from './missionsProfile';
+
 const Profile = () => (
   <div>
-    Profile page
+    <MissionProfile />
   </div>
 );
 
