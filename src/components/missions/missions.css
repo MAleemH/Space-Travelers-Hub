@@ -141,3 +141,22 @@ tr:nth-child(odd) {
   background-color: var(--join-mission-btn);
   color: var(--bg-white);
 }
+
+/* Mission Profile */
+
+.missions-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  column-gap: 5rem;
+  padding: 20px;
+}
+
+.missionProfileTitle {
+  margin-bottom: 10px;
+}
+
+.missionList {
+  list-style: none;
+  padding-left: 30px;
+}
