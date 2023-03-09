@@ -11,27 +11,28 @@ const Missions = () => {
   const missionsInfo = useSelector((state) => state.missions.missionLists);
 
   useEffect(() => {
-    dispatch(getMissionsData());
-  }, [dispatch]);
+    if (missionsInfo.length === 0) dispatch(getMissionsData());
+  }, [dispatch, missionsInfo.length]);
 
   return (
     <div className="container">
       <table className="table-container">
         <thead id="thead">
           <tr>
-            <th className="th">Missions</th>
-            <th className="th">Description</th>
-            <th className="th">status</th>
-            <th className="th"> </th>
+            <th className="th missionSize">Missions</th>
+            <th className="th descrSize">Description</th>
+            <th className="th statusSize">status</th>
+            <th className="th empty"> </th>
           </tr>
         </thead>
         <tbody>
           {missionsInfo.map((missions) => (
             <EachMission
-              key={missions.mission_id}
-              missionId={missions.mission_id}
-              missionName={missions.mission_name}
+              key={missions.missionId}
+              missionId={missions.missionId}
+              missionName={missions.missionName}
               description={missions.description}
+              joinedMission={missions.joinedMission}
             />
           ))}
         </tbody>
