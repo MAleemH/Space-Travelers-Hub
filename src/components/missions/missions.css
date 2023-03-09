@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
+:root {
+  /* Colors */
+  --bg-white: #fff;
+  --join-mission-btn: #343a40;
+  --table-border: #dee2e6;
+  --leave-mission-btn: #dc3645;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,15 +19,12 @@ body {
 }
 
 .container {
-  margin: 20px 20px;
+  margin: 30px 30px;
 }
 
 .table-container {
   border-collapse: collapse;
-}
-
-th {
-  height: 50px;
+  width: 100%;
 }
 
 table,
@@ -30,6 +35,109 @@ th {
   padding: 10px 10px;
 }
 
-.join-mission-btn {
+th {
+  height: 50px;
+  text-align: center;
+}
+
+.missionSize {
+  width: 10%;
+}
+
+.descSize {
+  width: 60%;
+}
+
+.statusSize {
+  width: 15%;
+}
+
+.empty {
+  width: 15%;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+#thead tr {
+  background-color: var(--bg-white);
+}
+
+.td {
+  text-align: left;
+}
+
+.title-container {
+  width: 120px;
+  vertical-align: top;
+}
+
+.mission-title,
+.th {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* status */
+
+.td-with-span {
+  text-align: center;
+}
+
+.status {
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  color: var(--bg-white);
+}
+
+.active-member {
+  background-color: #18a2b8;
+}
+
+.not-a-member {
+  background-color: #6d757d;
+  color: var(--bg-white);
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+/* join button */
+
+.button-td {
+  width: 105px;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* mission */
+
+.leave-mission-btn {
+  color: var(--leave-mission-btn);
+  border: 1px solid var(--leave-mission-btn);
+  background-color: transparent;
   font-family: 'Merriweather', serif;
+  padding: 1rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.leave-mission-btn:hover {
+  background-color: var(--leave-mission-btn);
+  color: var(--bg-white);
+}
+
+.join-mission-btn {
+  color: var(--join-mission-btn);
+  border: 1px solid var(--join-mission-btn);
+  background-color: transparent;
+  padding: 1rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Merriweather', serif;
+}
+
+.join-mission-btn:hover {
+  background-color: var(--join-mission-btn);
+  color: var(--bg-white);
 }
