@@ -21,7 +21,7 @@ const ReservedMission = () => {
 
   return (
     <div className="missions-section">
-      <h1 className="profile-titles">My Missions</h1>
+      <p className="profile-titles">My Missions</p>
       <table className="missionList">
         {joinedMissionsList.length > 0 ? (
           joinedMissions

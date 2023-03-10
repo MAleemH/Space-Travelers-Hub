@@ -14,7 +14,7 @@ const ReservedRocket = () => {
 
   return (
     <div className="rockets-section">
-      <h1 className="profile-titles">My Rockets</h1>
+      <p className="profile-titles">My Rockets</p>
       <table className="rockets-list">
         {reservedRocket.length > 0 ? (
           list
