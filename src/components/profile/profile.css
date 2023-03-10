@@ -1,0 +1,45 @@
+.reserved-lists {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 20px;
+}
+
+.profile-titles {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.missions-section,
+.rockets-section {
+  display: flex;
+  flex-direction: column;
+  column-gap: 5rem;
+  width: 50%;
+}
+
+.missionList,
+.rockets-list {
+  border-collapse: collapse;
+}
+
+.reservedM,
+.rockets-list-items {
+  height: 50px;
+  padding: 20px;
+  width: 100%;
+  border: 2px solid black;
+}
+
+.listsM,
+.rocket-name {
+  padding: 10px;
+  font-weight: lighter;
+}
+
+.no-items {
+  padding: 10px;
+  text-align: center;
+  color: red;
+}
