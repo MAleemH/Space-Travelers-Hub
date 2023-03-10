@@ -159,7 +159,6 @@ tr:nth-child(odd) {
 .missions-profile {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   column-gap: 5rem;
   padding: 20px;
 }
@@ -169,10 +168,16 @@ tr:nth-child(odd) {
 }
 
 .missionList {
-  list-style: none;
-  padding-left: 30px;
+  border-collapse: collapse;
 }
 
 .reservedM {
-  padding-top: 20px;
+  height: 50px;
+  padding: 20px;
+  width: 100%;
+  border: 2px solid #d4d3d3;
+}
+
+.reservedM:nth-child(odd) {
+  background-color: white;
 }

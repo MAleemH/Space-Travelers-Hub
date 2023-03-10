@@ -10,21 +10,21 @@ const ReservedMission = () => {
   );
 
   const joinedMissions = joinedMissionsList.map((mission) => (
-    <li key={mission.missionId} className="reservedM">
+    <tr key={mission.missionId} className="reservedM">
       {mission.missionName}
-    </li>
+    </tr>
   ));
 
   return (
     <div className="missions-profile">
       <h1 className="missionProfileTitle">My Missions</h1>
-      <ul className="missionList">
+      <table className="missionList">
         {joinedMissionsList.length > 0 ? (
           joinedMissions
         ) : (
-          <li>No Missions Joined</li>
+          <tr>No Missions Joined</tr>
         )}
-      </ul>
+      </table>
     </div>
   );
 };
