@@ -149,7 +149,7 @@ tr:nth-child(odd) {
   cursor: pointer;
 }
 
-/* Mission inside Profile section*/
+/* Mission inside Profile section */
 
 .profileLists {
   display: flex;
@@ -172,6 +172,7 @@ tr:nth-child(odd) {
   list-style: none;
   padding-left: 30px;
 }
+
 .reservedM {
   padding-top: 20px;
 }
