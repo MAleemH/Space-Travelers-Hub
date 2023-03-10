@@ -10,7 +10,7 @@ describe('Missions', () => {
       .create(
         <BrowserRouter store={store}>
           <Navbar />
-        </BrowserRouter>
+        </BrowserRouter>,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
