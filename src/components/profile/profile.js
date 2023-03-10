@@ -1,8 +1,11 @@
-import MissionProfile from './missionsProfile';
+import ReservedMission from './reservedMissions';
+import ReservedRocket from './reservedRockets';
+import '../missions/missions.css';
 
 const Profile = () => (
-  <div>
-    <MissionProfile />
+  <div className="profileLists">
+    <ReservedMission />
+    <ReservedRocket />
   </div>
 );
 
