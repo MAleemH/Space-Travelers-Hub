@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions Renders correctly 1`] = `
+<nav>
+  <a
+    className="nav-title"
+    href="/"
+  >
+    <img
+      alt="Logo-Img"
+      height="50"
+      src="logo.png"
+      width="50"
+    />
+    <h1
+      className="web-title"
+    >
+      Space Travelers' Hub
+    </h1>
+  </a>
+  <ul
+    className="nav-list"
+  >
+    <li
+      className="nav-items"
+    >
+      <a
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+      >
+        Rockets
+      </a>
+    </li>
+    <li
+      className="nav-items"
+    >
+      <a
+        className=""
+        href="/missions"
+        onClick={[Function]}
+      >
+        Missions
+      </a>
+    </li>
+    <li
+      className="nav-items"
+    >
+      <a
+        className=""
+        href="/profile"
+        onClick={[Function]}
+      >
+        Profile
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
