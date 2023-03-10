@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import '../missions/missions.css';
 
-const MissionProfile = () => {
+const ReservedMission = () => {
   const missionsInfo = useSelector((state) => state.missions.missionLists);
 
   const joinedMissionsList = missionsInfo.filter(
@@ -10,12 +10,14 @@ const MissionProfile = () => {
   );
 
   const joinedMissions = joinedMissionsList.map((mission) => (
-    <li key={mission.missionId}>{mission.missionName}</li>
+    <li key={mission.missionId} className="reservedM">
+      {mission.missionName}
+    </li>
   ));
 
   return (
     <div className="missions-profile">
-      <h2 className="missionProfileTitle">My Missions</h2>
+      <h1 className="missionProfileTitle">My Missions</h1>
       <ul className="missionList">
         {joinedMissionsList.length > 0 ? (
           joinedMissions
@@ -26,4 +28,4 @@ const MissionProfile = () => {
     </div>
   );
 };
-export default MissionProfile;
+export default ReservedMission;
