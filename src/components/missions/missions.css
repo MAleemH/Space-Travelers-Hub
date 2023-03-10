@@ -56,7 +56,7 @@ th {
   width: 15%;
 }
 
-tr:nth-child(odd) {
+.missions-list:nth-child(odd) {
   background-color: #f2f2f2;
 }
 
@@ -147,42 +147,4 @@ tr:nth-child(odd) {
   background-color: var(--join-mission-btn);
   color: var(--bg-white);
   cursor: pointer;
-}
-
-/* Mission inside Profile section */
-
-.profileLists {
-  display: flex;
-  justify-content: space-around;
-}
-
-.missions-profile {
-  display: flex;
-  flex-direction: column;
-  column-gap: 5rem;
-  padding: 20px;
-}
-
-.missionProfileTitle {
-  margin-bottom: 10px;
-}
-
-.missionList {
-  border-collapse: collapse;
-}
-
-.reservedM {
-  height: 50px;
-  padding: 20px;
-  width: 100%;
-  border: 2px solid black;
-}
-
-.listsM {
-  padding: 10px;
-  font-weight: lighter;
-}
-
-.reservedM:nth-child(odd) {
-  background-color: white;
 }

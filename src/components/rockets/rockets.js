@@ -4,13 +4,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchRocketsData, reserveRocket, cancelReserve } from '../../redux/rockets/rocketsSlice';
 
 const Rockets = () => {
-  const rocketsData = useSelector((state) => state.rockets);
+  const rocketsData = useSelector((state) => state.rockets.rocketsLists);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRocketsData());
-  }, [dispatch]);
+    if (rocketsData.length === 0) dispatch(fetchRocketsData());
+  }, [dispatch, rocketsData.length]);
 
   return (
     <>

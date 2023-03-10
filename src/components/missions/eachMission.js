@@ -9,7 +9,7 @@ function EachMission({
   const statusClass = joinedMission ? 'active-member' : 'not-a-member';
 
   return (
-    <tr>
+    <tr className="missions-list">
       <td className="td mission-title">
         <h1 className="mission-title">{missionName}</h1>
       </td>
