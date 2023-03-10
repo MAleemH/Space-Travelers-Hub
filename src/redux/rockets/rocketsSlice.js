@@ -3,6 +3,12 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 // rockets API
 const rocketsAPI = 'https://api.spacexdata.com/v3/rockets';
 
+const initialState = {
+  rocketsLists: [],
+  isLoading: false,
+  status: 'idle',
+};
+
 // fetching data from API
 export const fetchRocketsData = createAsyncThunk('fetchRocketsData', async () => {
   const response = await fetch(rocketsAPI);
@@ -22,28 +28,44 @@ export const fetchRocketsData = createAsyncThunk('fetchRocketsData', async () =>
 
 const rocketsSlice = createSlice({
   name: 'rockets',
-  initialState: [],
+  initialState,
   reducers: {
     reserveRocket(state, action) {
-      return state.map((rocket) => {
+      const newState = state.rocketsLists.map((rocket) => {
         if (rocket.id !== action.payload) {
-          return { ...rocket };
+          return rocket;
         }
-        return { ...rocket, reserved: true };
+        return { ...rocket, reserved: !rocket.reserved };
       });
+      return { ...state, rocketsLists: newState };
     },
     cancelReserve(state, action) {
-      return state.map((rocket) => {
+      const newState = state.rocketsLists.map((rocket) => {
         if (rocket.id !== action.payload) {
-          return { ...rocket };
+          return rocket;
         }
-        return { ...rocket, reserved: false };
+        return { ...rocket, reserved: !rocket.reserved };
       });
+      return { ...state, rocketsLists: newState };
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchRocketsData.fulfilled, (state, action) => action.payload);
+      .addCase(fetchRocketsData.pending, (state) => ({
+        ...state,
+        isLoading: true,
+        error: '',
+      }))
+      .addCase(fetchRocketsData.fulfilled, (state, action) => ({
+        ...state,
+        isLoading: false,
+        rocketsLists: action.payload,
+      }))
+      .addCase(fetchRocketsData.rejected, (state, action) => ({
+        ...state,
+        isLoading: false,
+        error: action.error,
+      }));
   },
 });
 
