@@ -175,7 +175,12 @@ tr:nth-child(odd) {
   height: 50px;
   padding: 20px;
   width: 100%;
-  border: 2px solid #d4d3d3;
+  border: 2px solid black;
+}
+
+.listsM {
+  padding: 10px;
+  font-weight: lighter;
 }
 
 .reservedM:nth-child(odd) {

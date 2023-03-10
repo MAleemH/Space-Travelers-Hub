@@ -11,7 +11,11 @@ const ReservedMission = () => {
 
   const joinedMissions = joinedMissionsList.map((mission) => (
     <tr key={mission.missionId} className="reservedM">
-      {mission.missionName}
+      <h3 className="listsM">
+        {' '}
+        {mission.missionName}
+        {' '}
+      </h3>
     </tr>
   ));
 
