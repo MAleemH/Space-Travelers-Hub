@@ -79,6 +79,10 @@ tr:nth-child(odd) {
   text-align: center;
 }
 
+.mission-description {
+  font-size: 15px;
+}
+
 /* status */
 
 .td-with-span {
@@ -89,6 +93,7 @@ tr:nth-child(odd) {
   padding: 0.3rem;
   border-radius: 0.3rem;
   color: var(--bg-white);
+  font-size: 12px;
 }
 
 .active-member {
@@ -107,7 +112,7 @@ tr:nth-child(odd) {
 .button-td {
   width: 105px;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 /* mission */
@@ -117,7 +122,7 @@ tr:nth-child(odd) {
   border: 1px solid var(--leave-mission-btn);
   background-color: transparent;
   font-family: 'Merriweather', serif;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 0.25rem;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -125,13 +130,14 @@ tr:nth-child(odd) {
 .leave-mission-btn:hover {
   background-color: var(--leave-mission-btn);
   color: var(--bg-white);
+  cursor: pointer;
 }
 
 .join-mission-btn {
   color: var(--join-mission-btn);
   border: 1px solid var(--join-mission-btn);
   background-color: transparent;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 0.25rem;
   transition: background-color 0.3s, color 0.3s;
   font-family: 'Merriweather', serif;
@@ -140,6 +146,7 @@ tr:nth-child(odd) {
 .join-mission-btn:hover {
   background-color: var(--join-mission-btn);
   color: var(--bg-white);
+  cursor: pointer;
 }
 
 /* Mission Profile */

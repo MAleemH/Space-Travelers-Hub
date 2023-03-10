@@ -21,7 +21,7 @@ const Missions = () => {
           <tr>
             <th className="th missionSize">Missions</th>
             <th className="th descrSize">Description</th>
-            <th className="th statusSize">status</th>
+            <th className="th statusSize">Status</th>
             <th className="th empty"> </th>
           </tr>
         </thead>
