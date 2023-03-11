@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Profile Page Rendered Correctly 1`] = `
+<div
+  className="reserved-lists"
+>
+  <div
+    className="missions-section"
+  >
+    <p
+      className="profile-titles"
+    >
+      My Missions
+    </p>
+    <table
+      className="missionList"
+    >
+      <tr
+        className="reservedM"
+      >
+        <p
+          className="no-items"
+        >
+          No Missions Joined
+        </p>
+      </tr>
+    </table>
+  </div>
+  <div
+    className="rockets-section"
+  >
+    <p
+      className="profile-titles"
+    >
+      My Rockets
+    </p>
+    <table
+      className="rockets-list"
+    >
+      <tr
+        className="rockets-list-items"
+      >
+        <p
+          className="no-items"
+        >
+          No Rockets Reserved
+        </p>
+      </tr>
+    </table>
+  </div>
+</div>
+`;

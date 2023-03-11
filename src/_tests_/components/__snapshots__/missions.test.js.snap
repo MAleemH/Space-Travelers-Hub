@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions Renders correctly for reserved state 1`] = `
+<div
+  className="container"
+>
+  <table
+    className="table-container"
+  >
+    <thead
+      id="thead"
+    >
+      <tr>
+        <th
+          className="th missionSize"
+        >
+          Missions
+        </th>
+        <th
+          className="th descrSize"
+        >
+          Description
+        </th>
+        <th
+          className="th statusSize"
+        >
+          Status
+        </th>
+        <th
+          className="th empty"
+        >
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;

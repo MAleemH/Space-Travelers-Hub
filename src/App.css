@@ -1,0 +1,40 @@
+/* navbar */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid gray;
+}
+
+.nav-title,
+.nav-list {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-items:nth-child(3) {
+  border-left: 2px solid #eee;
+  padding-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 162, 255);
+}
+
+.web-title {
+  color: black;
+}
+
+.active {
+  text-decoration: underline;
+}
